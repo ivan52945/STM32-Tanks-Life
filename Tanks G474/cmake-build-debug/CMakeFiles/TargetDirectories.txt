@@ -1,0 +1,3 @@
+D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/CMakeFiles/Tanks.elf.dir
+D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/CMakeFiles/rebuild_cache.dir
