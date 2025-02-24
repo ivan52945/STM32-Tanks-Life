@@ -1,6 +1,6 @@
 #pragma once
 
 struct point_t {
-int x;
-int y;
+  int x;
+  int y;
 };

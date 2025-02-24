@@ -15,8 +15,8 @@
  *
  ******************************************************************************
  */
-/* USER CODE END Header */
-/* Includes ------------------------------------------------------------------*/
+ /* USER CODE END Header */
+ /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "dma.h"
 #include "spi.h"
@@ -71,7 +71,7 @@ void SystemClock_Config(void);
  */
 int main(void)
 {
-  
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -80,14 +80,14 @@ int main(void)
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-  
+
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
 
   /* Configure the system clock */
   SystemClock_Config();
-  
+
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
@@ -100,16 +100,16 @@ int main(void)
   /* USER CODE BEGIN 2 */
   ST7789_Init();
   ST7789_Fill_Color(BLACK);
-  
+
   int tanks_cnt[2] = { 6, 6 };
-  
+
   std::list<Tank*> tanks;
   std::list<Tank*>::iterator tank_it;
   std::list<Shell*> shells;
   std::list<Shell*>::iterator shell_it;
-  
-  Tank *tank = NULL;
-  Shell *shell = NULL;
+
+  Tank* tank = NULL;
+  Shell* shell = NULL;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -117,31 +117,31 @@ int main(void)
 
   while (1) {
     HAL_Delay(20);
-    
+
     spawn(tanks, tanks_cnt);
-    
+
     for (auto tank_upd : tanks) {
       tank_upd->update();
       for (auto tank_check : tanks) {
         if (tank_check == tank_upd)
           continue;
-        
+
         resolve_collizion(*tank_upd, *tank_check);
       }
       tank_upd->shot(shells);
     }
-    
+
     for (auto shell : shells) {
       shell->move();
-      
+
       if (!(shell->life))
         continue;
-      
+
       for (auto tank : tanks) {
         resolve_collizion(*shell, *tank);
       }
     }
-    
+
     for (shell_it = shells.begin(); shell_it != shells.end();) {
       shell = *shell_it;
       if (!(shell->life)) {
@@ -151,7 +151,7 @@ int main(void)
       else
         shell_it++;
     }
-    
+
     for (tank_it = tanks.begin(); tank_it != tanks.end();) {
       tank = *tank_it;
       if (tank->life < 1) {
@@ -162,11 +162,11 @@ int main(void)
       else
         tank_it++;
     }
-    
-    for (Tank *tank : tanks)
+
+    for (Tank* tank : tanks)
       tank->print();
-    
-    for (Shell *shell : shells)
+
+    for (Shell* shell : shells)
       shell->print();
     /* USER CODE END WHILE */
 
@@ -183,11 +183,11 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = { 0 };
   RCC_ClkInitTypeDef RCC_ClkInitStruct = { 0 };
-  
+
   /** Configure the main internal regulator output voltage
    */
   HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1_BOOST);
-  
+
   /** Initializes the RCC Oscillators according to the specified parameters
    * in the RCC_OscInitTypeDef structure.
    */
@@ -204,16 +204,16 @@ void SystemClock_Config(void)
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) {
     Error_Handler();
   }
-  
+
   /** Initializes the CPU, AHB and APB buses clocks
    */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
-      | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+    | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
-  
+
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK) {
     Error_Handler();
   }
@@ -232,8 +232,7 @@ void Error_Handler(void)
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
   __disable_irq();
-  while (1) {
-  }
+  while (1) { }
   /* USER CODE END Error_Handler_Debug */
 }
 
@@ -245,11 +244,11 @@ void Error_Handler(void)
   * @param  line: assert_param error line source number
   * @retval None
   */
-void assert_failed(uint8_t *file, uint32_t line)
+void assert_failed(uint8_t* file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
      ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
-  /* USER CODE END 6 */
+     /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */

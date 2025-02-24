@@ -15,27 +15,27 @@ enum action_t {
 
 class Tank: public Entity {
 private:
-int frame;
+  int frame;
 
-int shot_cd = 0;
-const uint16_t (*frame_buff_directed)[HEIGHT * WIDTH];
-const uint16_t (*const frame_buff)[FRAMES][HEIGHT * WIDTH];
-int ch_dir_cd = 0;
-int stuck_cnt = 0;
-action_t action = ROTATE;
+  int shot_cd = 0;
+  const uint16_t (*frame_buff_directed)[HEIGHT * WIDTH];
+  const uint16_t (*const frame_buff)[FRAMES][HEIGHT * WIDTH];
+  int ch_dir_cd = 0;
+  int stuck_cnt = 0;
+  action_t action = ROTATE;
 public:
-int life = 2;
-bool shot_st = false;
+  int life = 2;
+  bool shot_st = false;
 
-Tank(int x, int y, int dir, int side);
+  Tank(int x, int y, int dir, int side);
 
-void move();
-void print();
-void back(bool stuck = false);
-void shot(std::list<Shell*> &shells);
-void update();
-void rotate(int new_dir);
+  void move();
+  void print();
+  void back(bool stuck = false);
+  void shot(std::list<Shell*> &shells);
+  void update();
+  void rotate(int new_dir);
 
-~Tank();
+  ~Tank();
 };
 
