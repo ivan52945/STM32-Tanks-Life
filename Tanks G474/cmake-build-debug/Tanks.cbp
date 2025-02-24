@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Tanks"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tanks.elf">
+				<Option output="D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Tanks.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32G474xx"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Inc"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Game/Inc"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/ST7789"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Device/ST/STM32G4xx/Include"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include"/>
+					<Add directory="C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include/c++/14.2.1"/>
+					<Add directory="C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include/c++/14.2.1/arm-none-eabi"/>
+					<Add directory="C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include/c++/14.2.1/backward"/>
+					<Add directory="C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/include"/>
+					<Add directory="C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tanks.elf"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tanks.elf/fast">
+				<Option output="D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Tanks.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32G474xx"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Inc"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Game/Inc"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/ST7789"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Device/ST/STM32G4xx/Include"/>
+					<Add directory="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include"/>
+					<Add directory="C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include/c++/14.2.1"/>
+					<Add directory="C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include/c++/14.2.1/arm-none-eabi"/>
+					<Add directory="C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include/c++/14.2.1/backward"/>
+					<Add directory="C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/include"/>
+					<Add directory="C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tanks.elf/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Iot Courses/5. Microcontrollers STM32/Tanks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Inc/dma.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Inc/gpio.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Inc/main.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Inc/spi.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Inc/stm32g4xx_hal_conf.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Inc/stm32g4xx_it.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Inc/tim.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Src/dma.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Src/gpio.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Src/main.cpp">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Src/spi.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Src/stm32g4xx_hal_msp.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Src/stm32g4xx_it.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Src/syscalls.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Src/sysmem.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Src/system_stm32g4xx.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Src/tim.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Core/Startup/startup_stm32g474ceux.s">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Device/ST/STM32G4xx/LICENSE.txt">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/cmsis_armcc.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/cmsis_armclang.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/cmsis_armclang_ltm.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/cmsis_compiler.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/cmsis_gcc.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/cmsis_iccarm.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/cmsis_version.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_armv81mml.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_armv8mbl.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_armv8mml.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_cm0.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_cm0plus.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_cm1.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_cm23.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_cm3.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_cm33.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_cm35p.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_cm4.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_cm7.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_sc000.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/core_sc300.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/mpu_armv7.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/mpu_armv8.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/Include/tz_context.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/CMSIS/LICENSE.txt">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/ST7789/color.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/ST7789/fonts.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/ST7789/fonts.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/ST7789/st7789.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/ST7789/st7789.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cortex.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_crs.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dmamux.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_spi.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_system.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_utils.h">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/LICENSE.txt">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Game/Inc/config.hpp">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Game/Inc/entity.hpp">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Game/Inc/game.hpp">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Game/Inc/shell.hpp">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Game/Inc/tank.hpp">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Game/Inc/tank_frames.hpp">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Game/Src/entity.cpp">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Game/Src/game.cpp">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Game/Src/shell.cpp">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/Game/Src/tank.cpp">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/STM32G474CEUX_FLASH.ld">
+			<Option target="Tanks.elf"/>
+		</Unit>
+		<Unit filename="D:/Iot Courses/5. Microcontrollers STM32/Tanks/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
