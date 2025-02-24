@@ -25,7 +25,7 @@ extern "C" {
 #define GREEN       0x07E2
 #define CYAN        0x7FFF
 #define YELLOW      0xFF20
-#define ORANGE 		0xFB60
+#define ORANGE 		  0xFB60
 #define GRAY        0X8430
 #define BRED        0XF81F
 #define GRED        0XFFE0
@@ -41,9 +41,9 @@ extern "C" {
 #define LGRAYBLUE   0XA651
 #define LBBLUE      0X2B12
 
-#define GREENORS	0x07EE
-#define PINKORS		0xF811
-#define YELLOWORS	0xFF20
+#define GREENORS	  0x07EE
+#define PINKORS		  0xF811
+#define YELLOWORS	  0xFF20
 
 #ifdef __cplusplus
 }

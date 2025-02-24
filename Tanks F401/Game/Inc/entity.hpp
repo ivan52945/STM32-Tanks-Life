@@ -6,15 +6,15 @@ enum side_t {
 
 class Entity {
 public:
-int x;
-int y;
-int side;
-int dir;
+  int x;
+  int y;
+  int side;
+  int dir;
 //public:
-Entity(int x, int y, int dir, int side);
+  Entity(int x, int y, int dir, int side);
 
 //virtual void update() = 0;
-virtual void print() = 0;
+  virtual void print() = 0;
 
-virtual ~Entity();
+  virtual ~Entity();
 };
