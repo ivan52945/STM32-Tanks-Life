@@ -60,7 +60,6 @@ void Tank::move()
 
 void Tank::back(bool stuck)
 {
-  
   switch (dir) {
     case UP:
       y += 1;

@@ -53,8 +53,7 @@ static void ST7789_WriteData(uint8_t *buff, size_t buff_size)
     HAL_SPI_Transmit_DMA(&ST7789_SPI_PORT, buff, chunk_size);
     
     //while (ST7789_SPI_PORT.hdmatx->State != HAL_DMA_STATE_READY)
-    while (ST7789_SPI_PORT.State != HAL_SPI_STATE_READY) {
-    }
+    while (ST7789_SPI_PORT.State != HAL_SPI_STATE_READY) { }
     
 #else
 //			/*TODO*/ HAL_SPI_Transmit(&ST7789_SPI_PORT, buff, chunk_size,  HAL_MAX_DELAY);
@@ -116,8 +115,7 @@ void ST7789_SetRotation(uint8_t m)
  * @param xi&yi -> coordinates of window
  * @return none
  */
-static void ST7789_SetAddressWindow(uint16_t x0, uint16_t y0, uint16_t x1,
-    uint16_t y1)
+static void ST7789_SetAddressWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1)
 {
   uint16_t x_start = x0 + X_SHIFT, x_end = x1 + X_SHIFT;
   uint16_t y_start = y0 + Y_SHIFT, y_end = y1 + Y_SHIFT;
@@ -163,7 +161,7 @@ void ST7789_Init(void)
     ST7789_WriteData(data, sizeof(data));
   }
   ST7789_SetRotation(ST7789_ROTATION);	//	MADCTL (Display Rotation)
-      
+  
   /* Internal LCD Voltage generator settings */
   ST7789_WriteCommand(0XB7);				//	Gate Control
   ST7789_WriteSmallData(0x35);			//	Default value
@@ -186,22 +184,20 @@ void ST7789_Init(void)
 
   ST7789_WriteCommand(0xE0);
   {
-    uint8_t data[] = { 0xD0, 0x04, 0x0D, 0x11, 0x13, 0x2B, 0x3F, 0x54, 0x4C,
-        0x18, 0x0D, 0x0B, 0x1F, 0x23 };
+    uint8_t data[] = { 0xD0, 0x04, 0x0D, 0x11, 0x13, 0x2B, 0x3F, 0x54, 0x4C, 0x18, 0x0D, 0x0B, 0x1F, 0x23 };
     ST7789_WriteData(data, sizeof(data));
   }
   
   ST7789_WriteCommand(0xE1);
   {
-    uint8_t data[] = { 0xD0, 0x04, 0x0C, 0x11, 0x13, 0x2C, 0x3F, 0x44, 0x51,
-        0x2F, 0x1F, 0x1F, 0x20, 0x23 };
+    uint8_t data[] = { 0xD0, 0x04, 0x0C, 0x11, 0x13, 0x2C, 0x3F, 0x44, 0x51, 0x2F, 0x1F, 0x1F, 0x20, 0x23 };
     ST7789_WriteData(data, sizeof(data));
   }
   ST7789_WriteCommand(ST7789_INVON);		//	Inversion ON
   ST7789_WriteCommand(ST7789_SLPOUT);	//	Out of sleep mode
   ST7789_WriteCommand(ST7789_NORON);		//	Normal Display on
   ST7789_WriteCommand(ST7789_DISPON);	//	Main screen turned on
-      
+  
   /*TODO*/HAL_Delay(50);
   HAL_TIM_PWM_Start(&ST7789_PWM_TIM, TIM_CHANNEL_1);
 #ifdef CHxN
@@ -263,13 +259,11 @@ void ST7789_DrawPixel(uint16_t x, uint16_t y, uint16_t color)
  * @param color -> color to Fill with
  * @return none
  */
-void ST7789_Fill(uint16_t xSta, uint16_t ySta, uint16_t xEnd, uint16_t yEnd,
-    uint16_t color)
+void ST7789_Fill(uint16_t xSta, uint16_t ySta, uint16_t xEnd, uint16_t yEnd, uint16_t color)
 {
   xEnd = xEnd >= ST7789_WIDTH ? ST7789_WIDTH - 1 : xEnd;
   yEnd = yEnd >= ST7789_HEIGHT ? ST7789_HEIGHT - 1 : yEnd;
-  if ((xEnd < 0) || (xEnd >= ST7789_WIDTH) || (yEnd < 0)
-      || (yEnd >= ST7789_HEIGHT))
+  if ((xEnd < 0) || (xEnd >= ST7789_WIDTH) || (yEnd < 0) || (yEnd >= ST7789_HEIGHT))
     return;
   uint16_t datas[(yEnd - ySta) * (xEnd - xSta + 1)];
   
@@ -320,8 +314,7 @@ void ST7789_SetBacklight(uint8_t stat)
  * @param color -> color of the line to Draw
  * @return none
  */
-void ST7789_DrawLine(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1,
-    uint16_t color)
+void ST7789_DrawLine(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color)
 {
   uint16_t swap;
   uint16_t steep = ABS(y1 - y0) > ABS(x1 - x0);
@@ -384,8 +377,7 @@ void ST7789_DrawLine(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1,
  * @param color -> color of the Rectangle line
  * @return none
  */
-void ST7789_DrawRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2,
-    uint16_t color)
+void ST7789_DrawRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color)
 {
   
   ST7789_Select();
@@ -447,8 +439,7 @@ void ST7789_DrawCircle(uint16_t x0, uint16_t y0, uint8_t r, uint16_t color)
  * @param data -> pointer of the Image array
  * @return none
  */
-void ST7789_DrawImage(uint16_t x, uint16_t y, uint16_t w, uint16_t h,
-    const uint16_t *data)
+void ST7789_DrawImage(uint16_t x, uint16_t y, uint16_t w, uint16_t h, const uint16_t *data)
 {
   if ((x >= ST7789_WIDTH) || (y >= ST7789_HEIGHT))
     return;
@@ -475,8 +466,7 @@ void ST7789_DrawImage(uint16_t x, uint16_t y, uint16_t w, uint16_t h,
  * @param bcolor
  * @param isTransparent
  */
-void ST7789_DrawImageComp(uint16_t x, uint16_t y, uint16_t w, uint16_t h,
-    const uint16_t *data, uint16_t num, uint16_t bcolor, uint16_t isTransparent)
+void ST7789_DrawImageComp(uint16_t x, uint16_t y, uint16_t w, uint16_t h, const uint16_t *data, uint16_t num, uint16_t bcolor, uint16_t isTransparent)
 {
   uint16_t image[w * h];	//decompressed image
   uint32_t imageI = 0;	//image index
@@ -487,11 +477,10 @@ void ST7789_DrawImageComp(uint16_t x, uint16_t y, uint16_t w, uint16_t h,
     color = data[i];	//get color
     ++i;
     n = data[i];	//get number of repetition
-        
+    
     if (color == 0x00 && isTransparent)	//Transparency support
-        {
-      wmemset((uint16_t*) (image + imageI), WINVERT(bcolor),
-          n * sizeof(uint16_t));//set color to memory range, better than loop ;D
+    {
+      wmemset((uint16_t*) (image + imageI), WINVERT(bcolor), n * sizeof(uint16_t));	//set color to memory range, better than loop ;D
     }
     else {
       wmemset((uint16_t*) (image + imageI), color, n * sizeof(uint16_t));	//set color to memory range, better than loop ;D
@@ -522,8 +511,7 @@ void ST7789_InvertColors(uint8_t invert)
  * @param bgcolor -> background color of the char
  * @return  none
  */
-void ST7789_WriteChar(uint16_t x, uint16_t y, char ch, FontDef font,
-    uint16_t color, uint16_t bgcolor)
+void ST7789_WriteChar(uint16_t x, uint16_t y, char ch, FontDef font, uint16_t color, uint16_t bgcolor)
 {
   uint32_t i, b, j;
   ST7789_SetAddressWindow(x, y, x + font.width - 1, y + font.height - 1);
@@ -559,8 +547,7 @@ void ST7789_WriteChar(uint16_t x, uint16_t y, char ch, FontDef font,
  * @param bgcolor -> background color of the string
  * @return  none
  */
-void ST7789_WriteString(uint16_t x, uint16_t y, const char *str, FontDef font,
-    uint16_t color, uint16_t bgcolor)
+void ST7789_WriteString(uint16_t x, uint16_t y, const char *str, FontDef font, uint16_t color, uint16_t bgcolor)
 {
   ST7789_Select();
   while (*str) {
@@ -591,8 +578,7 @@ void ST7789_WriteString(uint16_t x, uint16_t y, const char *str, FontDef font,
  * @param color -> color of the Rectangle
  * @return  none
  */
-void ST7789_DrawFilledRectangle(uint16_t x, uint16_t y, uint16_t w, uint16_t h,
-    uint16_t color)
+void ST7789_DrawFilledRectangle(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color)
 {
   ST7789_Select();
   uint8_t i;
@@ -625,8 +611,7 @@ void ST7789_DrawFilledRectangle(uint16_t x, uint16_t y, uint16_t w, uint16_t h,
  * @param color ->color of the lines
  * @return  none
  */
-void ST7789_DrawTriangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2,
-    uint16_t x3, uint16_t y3, uint16_t color)
+void ST7789_DrawTriangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3, uint16_t color)
 {
   ST7789_Select();
   /* Draw lines */
@@ -642,8 +627,7 @@ void ST7789_DrawTriangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2,
  * @param color ->color of the triangle
  * @return  none
  */
-void ST7789_DrawFilledTriangle(uint16_t x1, uint16_t y1, uint16_t x2,
-    uint16_t y2, uint16_t x3, uint16_t y3, uint16_t color)
+void ST7789_DrawFilledTriangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3, uint16_t color)
 {
   ST7789_Select();
   int16_t deltax = 0, deltay = 0, x = 0, y = 0, xinc1 = 0, xinc2 = 0, yinc1 = 0,

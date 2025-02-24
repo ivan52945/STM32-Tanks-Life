@@ -12,9 +12,9 @@ extern "C" {
  *
  */
 typedef struct FontDef {
-const uint8_t width; /**< Width of a char in pixel. */
-uint8_t height; /**< Height of a char in pixel. */
-const uint16_t *data; /**< Font datas. */
+  const uint8_t width; /**< Width of a char in pixel. */
+  uint8_t height; /**< Height of a char in pixel. */
+  const uint16_t *data; /**< Font datas. */
 } FontDef;
 
 //Font lib.

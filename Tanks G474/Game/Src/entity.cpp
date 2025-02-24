@@ -8,6 +8,4 @@ Entity::Entity(int x, int y, int dir, int side)
   this->dir = dir;
 }
 
-Entity::~Entity()
-{
-}
+Entity::~Entity() { }
