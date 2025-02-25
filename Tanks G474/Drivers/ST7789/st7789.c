@@ -4,7 +4,7 @@
 #define USE_DMA
 
 //Modifies the SPI clk when another slow device is present on the same line, such as an SD card.
-#define FCLK_FASTER() { MODIFY_REG(hspi1.Instance->CR1, SPI_BAUDRATEPRESCALER_256, SPI_BAUDRATEPRESCALER_8); }	/* Set SCLK = fast, approx 32 MBits/s */
+#define FCLK_FASTER() //{ MODIFY_REG(hspi1.Instance->CR1, SPI_BAUDRATEPRESCALER_256, SPI_BAUDRATEPRESCALER_4); }	/* Set SCLK = fast, approx 32 MBits/s */
 
 #ifdef USE_DMA
 #include <string.h>
